@@ -1,0 +1,69 @@
+html {
+	background: $light;
+	box-sizing: border-box;
+	color: $medium;
+	font-family: $main-font;
+	font-size: calc(100% * ( #{rem($base-font-size)} / 16px));
+	hyphens: manual;
+	overflow-x: hidden;
+	font-weight: 400;
+	line-height: rem($base-line-height);
+	scroll-behavior: smooth;
+	text-size-adjust: none;
+}
+
+body {
+	line-height:  rem($base-line-height);
+}
+
+a{
+	color: $primary;
+	text-decoration: none;
+	@extend %animated-transform;
+}
+// headlines
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
+	display: block;
+	text-rendering: optimizeLegibility;
+	hyphens: auto;
+	color: $dark;
+	line-height: 1.4em;
+	font-weight: 700;
+	font-family: $display-font;
+	margin-bottom: rem(26px);
+
+	span{
+		display: block;
+		font-weight: 400;
+		color: $dark;
+	}
+}
+
+h1, .h1{
+	font-size: $h1-font-size;
+}
+h2, .h2{
+	font-size: $h2-font-size;
+	margin-bottom: rem(90px);
+}
+h3, .h3{
+	font-size: $h3-font-size;
+}
+h4, .h4{
+	font-size: $h4-font-size;
+}
+h5, .h5{
+	font-size: $h5-font-size;
+}
+h6, .h6{
+	font-size: $h6-font-size;
+}
+
+
+ul, ol{
+	margin-bottom: 0;
+}
+dl{
+	margin-bottom: 0;
+}

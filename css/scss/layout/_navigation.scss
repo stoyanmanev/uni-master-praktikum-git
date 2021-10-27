@@ -1,0 +1,97 @@
+#navigation{
+	position: fixed;
+	top: 0;
+	right: 50%;
+    transform: translateX(50%);
+    padding: 0 rem($base-line-height);
+    background-color: transparent;
+    width: 100%;
+    @extend %animated-transform;
+	z-index: 1001;
+
+    body.sticky &{
+        background-color: $light;
+        box-shadow: 0 0 rem(4px) rem(4px) rgba($dark, 0.2);
+    }
+
+    ul{
+
+        &.navi{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            max-width: 1803px;
+            list-style: none;
+            padding: rem(25px) 0;
+            @extend %animated-transform;
+
+            body.sticky &{
+                padding: rem(15px) 0;
+            }
+
+            li{
+                display: block;
+                margin-right: rem(25px);
+
+                &:last-child{
+                    margin-right: 0;
+                }
+
+                a{
+                    position: relative;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: rem(15px);
+                    letter-spacing:  0.05em;
+                    color: $dark;
+                    font-family: $main-font;
+
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        height: rem(2px);
+                        width: 0%;
+                        background-color: $dark;
+                        @extend %animated-transform;
+                    }
+
+                    &:hover,
+                    &:active,
+                    &:focus{
+                        &:before{
+                            width: 100%;
+                        }
+                    }
+
+                    &.active{
+                        &:before{
+                            width: 100%;
+                        }
+                    }
+
+                    &.btn{
+                        text-transform: uppercase;
+                        padding: rem(5px) rem(25px);
+                        border: rem(2px) solid $dark;
+                        background-color: transparent;
+
+                        &:before{
+                            display: none;
+                        }
+
+                        &:hover,
+                        &:active,
+                        &:focus{
+                            background-color: $dark;
+                            color: $light;
+                            @extend %transform-top;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

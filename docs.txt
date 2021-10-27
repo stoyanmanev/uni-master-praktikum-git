@@ -1,0 +1,27 @@
+study{
+    js_es_6{
+        debugger,
+        Object.assign({}, obj, obj) === sread operator: ..arr, ..arr,
+        arr.map,
+        arr.filter,
+        arr.reduce,
+        return !condition ? true : false,
+        rerutn !a ? a: b => a ?? b,
+    }
+    includes{
+        import,
+        extopt,
+    }
+    async,
+    jQuery
+    api{
+        open weather api,
+        the movie database .org docs,
+        list view / grid view,
+        https://developers.themoviedb.org/3/discover/movie-discover
+        openweathermap.org/current
+    }
+    library{
+        momentsjs: for Dates,
+    }
+}

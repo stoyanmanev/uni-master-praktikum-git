@@ -1,0 +1,228 @@
+header{
+    margin-bottom: rem(100px);
+    .branding-cont{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: rem(25px) 0 rem(25px) rem($base-line-height - 12px);
+        z-index: 1002;
+        pointer-events: none;
+        background-color: transparent;
+        @extend %animated-transform;
+
+        body.sticky &{
+            padding: rem(15px) 0 rem(15px) rem($base-line-height - 12px);
+        }
+    }
+    .branding{
+        display: inline-block;
+        pointer-events: all;
+    }
+    .claim-container{
+        height: 100vh;
+        padding-top: rem(93px);
+        position: relative;
+
+        .img-container{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 50%;
+            clip-path: ellipse(70% 80% at 70% 50%);
+
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                // background: url('../images/layout/claim/claim-img-01.jpg')no-repeat center center/cover;
+            }
+
+            &[data-image='1']{
+                &:before{
+                    background: url('../images/layout/claim/claim-img-01.jpg')no-repeat center center/cover;
+                }
+            }
+            &[data-image='2']{
+                &:before{
+                    background: url('../images/layout/claim/claim-img-02.jpg')no-repeat center center/cover;
+                }
+            }
+            &[data-image='3']{
+                &:before{
+                    background: url('../images/layout/claim/claim-img-03.jpg')no-repeat center center/cover;
+                }
+            }
+
+        }
+        .claim{
+            height: 100%;
+            padding: rem(50px) 0;
+            display: flex;
+            align-items: center;
+            blockquote{
+                .text-box{
+                    .headline{
+                        font-size: rem(17px);
+                        line-height: rem(29px);
+                        color: $medium;
+                        font-weight: 700;
+                        & > strong{
+                            font-size: rem(72px);
+                            line-height: 1.2em;
+                            font-weight: 900;
+                            display: block;
+                            color: $dark;
+    
+                            span{
+                                color: transparent;
+                                -webkit-text-stroke: 1px #000;
+                            }
+                        }
+                    }
+                }
+                .social-media-box{
+                    a{
+                        font-size: rem(19px);
+                        line-height: rem(31px);
+                        margin: 0 rem(6px);
+                        display: inline-block;
+
+                        &:hover,
+                        &:active,
+                        &:focus{
+                            @extend %transform-top;
+
+                            i{
+                                color: $dark;
+                            }
+                        }
+                    }
+                    i{
+                        color: $medium;
+                        @extend %animated-transform;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main{
+    &#content{
+        p{
+            @extend .margin-bottom;
+        }
+    }
+    .section-content{
+        margin-bottom: rem(100px);
+
+        .content-center{
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        &.teaserBg{
+            background-color: rgba($medium, 0.06);
+            padding: rem(100px) 0;
+        }
+    }
+    .teaser-box{
+        @extend .margin-bottom;
+
+        .teaser{
+            position: relative;
+            display: block;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+
+            .info{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                opacity: 0;
+                visibility: hidden;
+                padding: rem(10px) rem(12px);
+                background-color: rgba($light, .7);
+                display: flex;
+                justify-content: space-between;
+                overflow: hidden;
+
+                @extend %animated-transform;
+
+                span{
+                    color: $dark;
+                    &.title{
+                        font-size: rem(18px);
+                        line-height: rem(28px);
+                        font-weight: 700;
+                    }
+                   
+                }
+            }
+            .objectFit{
+                img{
+                    width: 100%;
+                    transition: 0.5s ease-out;
+                }
+            }
+
+
+            &:hover,
+            &:active,
+            &:focus{
+                .info{
+                    height: rem(54px);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .skills-cont{
+        .skill{
+            display: flex;
+            justify-content: space-between;
+            font-family: $display-font;
+            color: $dark;
+        }
+        .parsent{
+            position: relative;
+            height: rem(4px);
+            background-color: rgba($medium, 0.1);
+            display: block;
+
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 0%;
+                background-color: $dark;
+                transition: 3s ease-in-out;
+            }
+            &[data-ready='ready']{
+                &:before{
+                    width: var(--i);
+                }
+            }
+        }
+    }
+}
+
+// footer{
+
+// }

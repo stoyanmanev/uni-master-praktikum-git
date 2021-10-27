@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+html {
+  background: #fff;
+  box-sizing: border-box;
+  color: #767676;
+  font-family: "Roboto", sans-serif;
+  font-size: calc(100% * ( 1rem / 16px));
+  hyphens: manual;
+  overflow-x: hidden;
+  font-weight: 400;
+  line-height: 2rem;
+  scroll-behavior: smooth;
+  text-size-adjust: none;
+}
+
+body {
+  line-height: 2rem;
+}
+
+a {
+  color: #14446a;
+  text-decoration: none;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  display: block;
+  text-rendering: optimizeLegibility;
+  hyphens: auto;
+  color: #222;
+  line-height: 1.4em;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1.7333333333rem;
+}
+h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, h5 span, .h5 span, h6 span, .h6 span {
+  display: block;
+  font-weight: 400;
+  color: #222;
+}
+
+h1, .h1 {
+  font-size: 30px;
+}
+
+h2, .h2 {
+  font-size: 26px;
+  margin-bottom: 6rem;
+}
+
+h3, .h3 {
+  font-size: 24px;
+}
+
+h4, .h4 {
+  font-size: 22px;
+}
+
+h5, .h5 {
+  font-size: 20px;
+}
+
+h6, .h6 {
+  font-size: 18px;
+}
+
+ul, ol {
+  margin-bottom: 0;
+}
+
+dl {
+  margin-bottom: 0;
+}
+
+main .teaser-box .teaser .info, header .claim-container .claim blockquote .social-media-box i, header .branding-cont, #navigation ul.navi li a:before, #navigation ul.navi, #navigation, .btn, a {
+  transition: all 0.3s ease-in-out;
+}
+
+header .claim-container .claim blockquote .social-media-box a:hover, header .claim-container .claim blockquote .social-media-box a:active, header .claim-container .claim blockquote .social-media-box a:focus, #navigation ul.navi li a.btn:hover, #navigation ul.navi li a.btn:active, #navigation ul.navi li a.btn:focus, .btn:hover, .btn:active, .btn:focus {
+  transform: translateY(-0.2666666667rem);
+}
+
+.highlight {
+  color: #14446a;
+  font-weight: 700;
+}
+
+.container-full {
+  max-width: 1803px;
+}
+
+.margin-bottom, main .teaser-box, main#content p {
+  margin-bottom: 2rem;
+}
+
+.break {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btn {
+  border: 0.1333333333rem solid #222;
+  color: #767676;
+  background-color: #000;
+  font-family: "Poppins", sans-serif;
+  padding: 0.8666666667rem 3.2rem;
+  display: inline-block;
+  font-weight: 400;
+}
+.btn:hover, .btn:active, .btn:focus {
+  background-color: #fff;
+  color: #222;
+}
+
+figure {
+  display: block;
+  width: 100%;
+}
+figure.objectFit {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+  height: auto;
+}
+figure.objectFit img {
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.ticket {
+  display: inline-block;
+  background-color: rgba(118, 118, 118, 0.2);
+  padding: 0.2666666667rem 0.6666666667rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1.4666666667rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.8rem;
+}
+
+#navigation {
+  position: fixed;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+  padding: 0 2rem;
+  background-color: transparent;
+  width: 100%;
+  z-index: 1001;
+}
+body.sticky #navigation {
+  background-color: #fff;
+  box-shadow: 0 0 0.2666666667rem 0.2666666667rem rgba(34, 34, 34, 0.2);
+}
+#navigation ul.navi {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1803px;
+  list-style: none;
+  padding: 1.6666666667rem 0;
+}
+body.sticky #navigation ul.navi {
+  padding: 1rem 0;
+}
+#navigation ul.navi li {
+  display: block;
+  margin-right: 1.6666666667rem;
+}
+#navigation ul.navi li:last-child {
+  margin-right: 0;
+}
+#navigation ul.navi li a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  color: #222;
+  font-family: "Roboto", sans-serif;
+}
+#navigation ul.navi li a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.1333333333rem;
+  width: 0%;
+  background-color: #222;
+}
+#navigation ul.navi li a:hover:before, #navigation ul.navi li a:active:before, #navigation ul.navi li a:focus:before {
+  width: 100%;
+}
+#navigation ul.navi li a.active:before {
+  width: 100%;
+}
+#navigation ul.navi li a.btn {
+  text-transform: uppercase;
+  padding: 0.3333333333rem 1.6666666667rem;
+  border: 0.1333333333rem solid #222;
+  background-color: transparent;
+}
+#navigation ul.navi li a.btn:before {
+  display: none;
+}
+#navigation ul.navi li a.btn:hover, #navigation ul.navi li a.btn:active, #navigation ul.navi li a.btn:focus {
+  background-color: #222;
+  color: #fff;
+}
+
+header {
+  margin-bottom: 6.6666666667rem;
+}
+header .branding-cont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.6666666667rem 0 1.6666666667rem 1.2rem;
+  z-index: 1002;
+  pointer-events: none;
+  background-color: transparent;
+}
+body.sticky header .branding-cont {
+  padding: 1rem 0 1rem 1.2rem;
+}
+header .branding {
+  display: inline-block;
+  pointer-events: all;
+}
+header .claim-container {
+  height: 100vh;
+  padding-top: 6.2rem;
+  position: relative;
+}
+header .claim-container .img-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  clip-path: ellipse(70% 80% at 70% 50%);
+}
+header .claim-container .img-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+header .claim-container .img-container[data-image="1"]:before {
+  background: url("../images/layout/claim/claim-img-01.jpg") no-repeat center center/cover;
+}
+header .claim-container .img-container[data-image="2"]:before {
+  background: url("../images/layout/claim/claim-img-02.jpg") no-repeat center center/cover;
+}
+header .claim-container .img-container[data-image="3"]:before {
+  background: url("../images/layout/claim/claim-img-03.jpg") no-repeat center center/cover;
+}
+header .claim-container .claim {
+  height: 100%;
+  padding: 3.3333333333rem 0;
+  display: flex;
+  align-items: center;
+}
+header .claim-container .claim blockquote .text-box .headline {
+  font-size: 1.1333333333rem;
+  line-height: 1.9333333333rem;
+  color: #767676;
+  font-weight: 700;
+}
+header .claim-container .claim blockquote .text-box .headline > strong {
+  font-size: 4.8rem;
+  line-height: 1.2em;
+  font-weight: 900;
+  display: block;
+  color: #222;
+}
+header .claim-container .claim blockquote .text-box .headline > strong span {
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+header .claim-container .claim blockquote .social-media-box a {
+  font-size: 1.2666666667rem;
+  line-height: 2.0666666667rem;
+  margin: 0 0.4rem;
+  display: inline-block;
+}
+header .claim-container .claim blockquote .social-media-box a:hover i, header .claim-container .claim blockquote .social-media-box a:active i, header .claim-container .claim blockquote .social-media-box a:focus i {
+  color: #222;
+}
+header .claim-container .claim blockquote .social-media-box i {
+  color: #767676;
+}
+
+main .section-content {
+  margin-bottom: 6.6666666667rem;
+}
+main .section-content .content-center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+main .section-content.teaserBg {
+  background-color: rgba(118, 118, 118, 0.06);
+  padding: 6.6666666667rem 0;
+}
+main .teaser-box .teaser {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+main .teaser-box .teaser .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0.6666666667rem 0.8rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+main .teaser-box .teaser .info span {
+  color: #222;
+}
+main .teaser-box .teaser .info span.title {
+  font-size: 1.2rem;
+  line-height: 1.8666666667rem;
+  font-weight: 700;
+}
+main .teaser-box .teaser .objectFit img {
+  width: 100%;
+  transition: 0.5s ease-out;
+}
+main .teaser-box .teaser:hover .info, main .teaser-box .teaser:active .info, main .teaser-box .teaser:focus .info {
+  height: 3.6rem;
+  opacity: 1;
+  visibility: visible;
+}
+main .teaser-box .teaser:hover img, main .teaser-box .teaser:active img, main .teaser-box .teaser:focus img {
+  transform: scale(1.1);
+}
+main .skills-cont .skill {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+main .skills-cont .parsent {
+  position: relative;
+  height: 0.2666666667rem;
+  background-color: rgba(118, 118, 118, 0.1);
+  display: block;
+}
+main .skills-cont .parsent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #222;
+  transition: 3s ease-in-out;
+}
+main .skills-cont .parsent[data-ready=ready]:before {
+  width: var(--i);
+}
+
+/*# sourceMappingURL=style.css.map */
