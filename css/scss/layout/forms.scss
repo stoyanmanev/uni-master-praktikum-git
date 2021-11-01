@@ -1,0 +1,27 @@
+main{
+    input{
+        background: $light;
+        border: 1px solid #bbb;
+        color: $dark;
+        display: block;
+        font-size: rem($base-font-size);
+        line-height: rem($base-line-height);
+        margin: 0 0 rem(12px) 0;
+        padding: rem(6px);
+        position: relative;
+        resize: none;
+        width: 100%;
+        border-radius: .83333rem;
+    }
+    select{
+        option{
+            &:first-child{
+                display: none;
+            }
+        }
+    }
+}
+
+::placeholder{
+    color: rgba($dark, 0.5);
+}

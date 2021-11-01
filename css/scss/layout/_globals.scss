@@ -14,6 +14,46 @@ html {
 
 body {
 	line-height:  rem($base-line-height);
+
+	overflow: hidden;
+
+    &.load{
+        overflow: visible;
+
+        main{
+            &:before,
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+	&.open-light-box{
+		overflow: hidden;
+		#ligth-box-container{
+			opacity: 1;
+			visibility: visible;
+	
+			.full-screen-container{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+	
+				.content-box{
+					display: inline-block;
+					position: relative;
+					height: 100%;
+					width: 100%;
+				}
+			}
+		}
+	}
+	&:not(.scroll-to-top) .back-top {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
 
 a{

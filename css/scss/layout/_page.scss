@@ -113,6 +113,29 @@ header{
 }
 
 main{
+    position: relative;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($light, 0.95);
+        z-index: 9998;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        height: rem(70px);
+        width: rem(70px);
+        background: url('../images/layout/loading.svg')no-repeat center center/contain;
+        z-index: 9999;
+    }
+
     &#content{
         p{
             @extend .margin-bottom;
@@ -221,8 +244,167 @@ main{
             }
         }
     }
+
+    .sort-opinions{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rem($base-line-height);
+    }
+    #render-field{
+        &.grid-view{
+            display: flex;
+            .col{
+                flex-basis: 33.3333%;
+                max-width: 33.3333%;
+            }
+
+            .container-data{
+
+                position: relative;
+                display: block;
+                overflow: hidden;
+                height: rem(275px);
+                @extend .margin-bottom;
+        
+                // normalize
+                .objectFit{
+                    img{
+                        margin-bottom: 0;
+                    }
+                }
+                // --normalize
+        
+                .text-data{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: auto;
+                    background-color: rgba($light, 0.7);
+                    text-align: center;
+                    padding: rem(10px) rem(12px);
+                    overflow: hidden;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: translateY(100%);
+                    @extend %animated-transform;
+                    z-index: 1;
+        
+                    .title{
+                        font-weight: 700;
+                        font-size: rem(19.2px);
+                        line-height: rem(29px);
+                        opacity: 0;
+                        visibility: hidden;
+                        color: $dark;
+                    }
+                    .competition{
+                        opacity: 0;
+                        visibility: hidden;
+                        color: $dark;
+                    }
+                }
+                .thumbnail{
+                    height: 100%;
+                    figure{
+                        height: 100% !important;
+                        img{
+                            transform: scale(1);
+                            width: 100%;
+                            transition: 0.5s ease-out;                  
+                        }
+                    }
+                }
+                &:hover,
+                &:active,
+                &:focus{
+                    .text-data{
+                        bottom: 0;
+                        visibility: visible;
+                        opacity: 1;
+                        transform: translateY(0);
+                        .title,
+                        .competition{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    .thumbnail{
+                        figure{
+                            img{
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.column-view{
+            display: flex;
+            .col{
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+            .container-data{
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                margin-bottom: rem(32px);
+            }
+            .thumbnail{
+                height: rem(275px);
+                width: rem(360px);
+                margin-right: rem($base-line-height);
+                figure{
+                    height: 100%;
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .title{
+                font-weight: 700;
+                font-size: rem(19.2px);
+                line-height: rem(29px);
+                color: $dark;
+            }
+            .competition{
+                color: $dark;
+            }
+        }
+    }
+    .view-btns-box{
+        display: flex;
+        & > *{
+            margin-right: rem($base-gap);
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        i{
+            font-size: rem($h3-font-size);
+            line-height: 1rem;
+            color: $medium;
+            cursor: pointer;
+            @extend %animated-transform;
+
+            &:hover,
+            &:active,
+            &:focus{
+                color: $dark;
+            }
+            &.active{
+                transform: scale(1.10);
+                color: $dark;
+            }
+        }
+    }
 }
 
 // footer{
 
 // }
+
+
+

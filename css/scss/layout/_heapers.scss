@@ -69,3 +69,84 @@ figure {
     font-family: $display-font;
     margin-bottom: rem($base-gap);
 }
+
+.back-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 800;
+    font-size: 1rem;
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    background-color: $dark;
+    color: $light;
+    text-decoration: none;
+    text-align: center;
+}
+
+#ligth-box-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($dark, 0.8);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    @extend %animated-transform;
+
+    .full-screen-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        .content-box{
+            display: inline-block;
+            position: relative;
+            height: 100%;
+            width: 100%;
+
+            #resource{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: $dark;
+                color: $light;
+                text-align: center;
+                padding: rem(10px) rem(12px);
+            }
+            #content-text{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 56vh;
+                width: 50vw;
+                transform: translate(-50%, -50%);
+                background-color: $light;
+            }
+        }
+    }
+    #close-button {
+        top: rem(20px);
+        right: 2%;
+        right: calc(2% + #{rem(6px)});
+        width: rem(30px);
+        height: rem(30px);
+        position: absolute;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: transparent;
+        color: #ddd;
+        font: 1.6em sans-serif;
+        transition: background-color 0.4s ease;
+    }
+
+}
